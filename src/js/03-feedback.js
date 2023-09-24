@@ -30,12 +30,12 @@ form.addEventListener('input', throttledSaveData);
 
 form.addEventListener('submit', function (event) {
   event.preventDefault();
-  localStorage.removeItem('feedback-form-state');
-  form.email.value = '';
-  form.message.value = '';
-
   console.log({
     email: form.email.value,
     message: form.message.value,
   });
+
+  localStorage.removeItem('feedback-form-state');
+  form.email.value = '';
+  form.message.value = '';
 });
